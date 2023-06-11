@@ -1,0 +1,28 @@
+.error {
+  display: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: brown;
+}
+.loader {
+  display: none;
+  font-size: 25px;
+  font-weight: 600;
+}
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.cat-info {
+  display: flex;
+  margin-top: 20px;
+}
+h1 {
+  margin-top: 0;
+}
+.box {
+  width: 600px;
+  margin-left: 20px;
+}
