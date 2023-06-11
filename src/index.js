@@ -26,22 +26,19 @@ fetchCatByBreed(e.currentTarget.value)
 })
 
 function createCatInforms(arry) {
-    let object;
     let url;
     let description;
     let temperament;
     let name;
     arry.forEach(element => {
-        object = element.breeds,
-        url = element.url
+        description = element.breeds[0].description,
+            url = element.url,
+            temperament = element.breeds[0].temperament,
+            name = element.breeds[0].name
     });
-    object.forEach((en) => {
-        description = en.description,
-            temperament = en.temperament,
-            name = en.name
-    })
+
     return divEl.innerHTML =
-        ` <img src="${url}" alt="Cat" width="460" />
+        ` <img src="${url}" alt="Cat" width="460"  />
         <div class ="box">
         <h1>${name}</h1>
         <p>${description}</p>
