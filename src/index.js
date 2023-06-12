@@ -30,12 +30,21 @@ function createCatInforms(arry) {
     let description;
     let temperament;
     let name;
-    arry.forEach(element => {
-        description = element.breeds[0].description,
+    
+    if (!arry.length>0) {
+        return divEl.innerHTML = '',
+            addRemoveClass()
+    } else {
+            arry.forEach(element => {
+        
+            description = element.breeds[0].description,
             url = element.url,
             temperament = element.breeds[0].temperament,
             name = element.breeds[0].name
+
     });
+    }
+
 
     return divEl.innerHTML =
         ` <img src="${url}" alt="Cat" width="460"  />
