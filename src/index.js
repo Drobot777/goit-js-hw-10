@@ -2,6 +2,7 @@ import { fetchBreeds } from './cat-api'
 import { fetchCatByBreed } from './cat-api'
 export { selectEl }
 export { loaderEl }
+export{errorEl}
 
 const divEl = document.querySelector('.cat-info')
 const selectEl = document.querySelector('.breed-select')
@@ -32,8 +33,8 @@ function createCatInforms(arry) {
     let name;
     
     if (!arry.length>0) {
-        return divEl.innerHTML = '',
-            addRemoveClass()
+        return addClass()
+        
     } else {
             arry.forEach(element => {
         
@@ -62,7 +63,12 @@ function addRemoveClass() {
   errorEl.classList.add('block')
   }       
 
-
+function addClass() {
+    return selectEl.classList.remove('none'),
+    loaderEl.classList.remove('block'),
+        errorEl.classList.add('block'),
+    divEl.innerHTML=''
+}
     
     
 
